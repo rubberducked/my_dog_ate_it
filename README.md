@@ -309,22 +309,6 @@ No additional hardware or external setup is required.
 
 # 🚀 Run
 
-### Chrome / Chromium-based browsers
-
-1. Open the browser.
-2. Go to:
-
-```text
-chrome://extensions
-```
-
-3. Enable **Developer Mode**.
-4. Select **Load unpacked**.
-5. Select the project folder.
-6. Enable the extension.
-7. Open a webpage containing editable text.
-8. Wait for the dog.
-
 ### Firefox
 
 1. Open Firefox.

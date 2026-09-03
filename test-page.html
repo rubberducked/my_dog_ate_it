@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my dog ate my homework — Local Test Bench</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    .shortcuts {
+      background-color: #edf2f7;
+      border-left: 4px solid #3182ce;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      border-radius: 4px;
+    }
+    .shortcuts kbd {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e0;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+      padding: 2px 6px;
+      font-family: monospace;
+      font-size: 13px;
+    }
+    .form-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+    }
+    .field-group {
+      margin-bottom: 20px;
+    }
+    .field-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      color: #4a5568;
+    }
+    .char-count {
+      font-family: monospace;
+      font-size: 12px;
+      color: #718096;
+      background-color: #edf2f7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    input[type="text"], input[type="password"], textarea, [contenteditable] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e0;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    [contenteditable] {
+      min-height: 100px;
+      background-color: #ffffff;
+    }
+    .safe-badge {
+      background-color: #38a169;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+    .pw-badge {
+      background-color: #e53e3e;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+    .btn {
+      background-color: #3182ce;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn:hover {
+      background-color: #2b6cb0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐶 my dog ate my homework Test Bench</h1>
+
+  <div class="shortcuts">
+    <strong>⌨️ Dev Keyboard Shortcuts:</strong><br>
+    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> — Wake Up Now &nbsp;|&nbsp;
+    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd> — Rampage Now &nbsp;|&nbsp;
+    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>0</kbd> — Go To Sleep Now
+  </div>
+
+  <div class="form-card">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+      <h3 style="margin: 0;">Interactive Test Fields</h3>
+      <button class="btn" onclick="refillAllFields()">Refill Sample Text</button>
+    </div>
+
+    <!-- 1. Text Input -->
+    <div class="field-group">
+      <div class="field-header">
+        <label for="input1">Standard Text Input</label>
+        <span class="char-count" id="count-input1">0 chars</span>
+      </div>
+      <input type="text" id="input1" value="The quick brown fox jumps over the lazy sleeping pixel dog.">
+    </div>
+
+    <!-- 2. Textarea 1 -->
+    <div class="field-group">
+      <div class="field-header">
+        <label for="textarea1">Textarea Field #1</label>
+        <span class="char-count" id="count-textarea1">0 chars</span>
+      </div>
+      <textarea id="textarea1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+    </div>
+
+    <!-- 3. Textarea 2 -->
+    <div class="field-group">
+      <div class="field-header">
+        <label for="textarea2">Textarea Field #2</label>
+        <span class="char-count" id="count-textarea2">0 chars</span>
+      </div>
+      <textarea id="textarea2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+    </div>
+
+    <!-- 4. Contenteditable -->
+    <div class="field-group">
+      <div class="field-header">
+        <label for="ce1">Contenteditable Element</label>
+        <span class="char-count" id="count-ce1">0 chars</span>
+      </div>
+      <div contenteditable="true" id="ce1">
+        This is a rich contenteditable block. The dog's <code>TreeWalker</code> algorithm will inspect text nodes inside this block and bite random contiguous chunks from paragraphs weighted by length!
+      </div>
+    </div>
+
+    <!-- 5. Password Input -->
+    <div class="field-group">
+      <div class="field-header">
+        <label for="pw1">Password Input <span class="pw-badge">Password Input</span></label>
+        <span class="char-count" id="count-pw1">0 chars</span>
+      </div>
+      <input type="password" id="pw1" value="SuperSecretPassword123!">
+    </div>
+
+    <!-- 6. Safe Field -->
+    <div class="field-group">
+      <div class="field-header">
+        <label for="safe1">Safe Attribute Field <span class="safe-badge">[data-pixel-dog-safe]</span></label>
+        <span class="char-count" id="count-safe1">0 chars</span>
+      </div>
+      <textarea id="safe1" data-pixel-dog-safe="true">This field carries the [data-pixel-dog-safe="true"] attribute. The pixel dog will bite 20-25 character chunks from this text as well!</textarea>
+    </div>
+  </div>
+
+  <script>
+    function updateCounters() {
+      const ids = ['input1', 'textarea1', 'textarea2', 'pw1', 'safe1'];
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        const countEl = document.getElementById('count-' + id);
+        if (el && countEl) {
+          countEl.textContent = el.value.length + ' chars';
+        }
+      });
+
+      const ce = document.getElementById('ce1');
+      const ceCount = document.getElementById('count-ce1');
+      if (ce && ceCount) {
+        ceCount.textContent = (ce.textContent || '').length + ' chars';
+      }
+    }
+
+    function refillAllFields() {
+      document.getElementById('input1').value = "The quick brown fox jumps over the lazy sleeping pixel dog.";
+      document.getElementById('textarea1').value = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+      document.getElementById('textarea2').value = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+      document.getElementById('ce1').innerHTML = "This is a rich contenteditable block. The dog's <code>TreeWalker</code> algorithm will inspect text nodes inside this block and bite random contiguous chunks from paragraphs weighted by length!";
+      document.getElementById('pw1').value = "SuperSecretPassword123!";
+      document.getElementById('safe1').value = "This field carries the [data-pixel-dog-safe=\"true\"] attribute. The pixel dog will bite 20-25 character chunks from this text as well!";
+      updateCounters();
+    }
+
+    document.addEventListener('input', updateCounters);
+    document.addEventListener('change', updateCounters);
+    setInterval(updateCounters, 300);
+    updateCounters();
+  </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-# 🐶 My Dog Ate My Homework
+# 🐶 Ma Dog Ate Ma Homework
 
 ## Basic Details
 
@@ -15,7 +15,7 @@
 
 ## Project Description
 
-**My Dog Ate My Homework** is a completely unnecessary browser extension featuring a tiny pixelated dog that demands to be fed every 30 seconds.
+**Ma Dog Ate Ma Homework** is a completely unnecessary browser extension featuring a tiny pixelated dog that demands to be fed every 30 seconds.
 
 Ignore the dog for too long and it gets hungry, runs around your screen, and starts eating random chunks of text you've already typed. Feed it a treat in time, and it peacefully goes back to sleep.
 
@@ -362,7 +362,7 @@ about:debugging
 
 ---
 
-### Screenshot 3 — My Dog Ate My Homework
+### Screenshot 3 — Ma Dog Ate Ma Homework
 
 ![Screenshot3](Add screenshot 3 here)
 
@@ -481,7 +481,7 @@ We asked ourselves:
 
 > **"What if a browser extension could make using a browser objectively more annoying?"**
 
-And thus, **My Dog Ate My Homework** was born.
+And thus, **Ma Dog Ate Ma Homework** was born.
 
 Thousands of browser extensions exist to improve productivity.
 

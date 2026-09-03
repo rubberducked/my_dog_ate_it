@@ -1,77 +1,523 @@
-# Pixel Dog: Feed Me Or Else 🐶
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-A temporary Firefox extension featuring an overlay pixel-art dog that sleeps in the bottom-right corner and a bowl of treats in the bottom-left corner. Every 30 seconds the dog wakes up, stares expectantly at the user, and waits 10 seconds for a treat. If fed, he eats and goes back to sleep. If ignored, he goes on a destructive rampage across the page, eating typed text out of input fields and textareas permanently!
+# 🐶 My Dog Ate My Homework
 
----
+## Basic Details
 
-## 🚀 Installation Guide (Firefox Add-on)
+### Team Name: La Peace
 
-1. Open Firefox browser.
-2. Navigate to `about:debugging` in the address bar.
-3. Click **This Firefox** on the left menu.
-4. Click **Load Temporary Add-on...**
-5. Select `manifest.json` from the `pixel-dog` directory.
-6. The extension is now active on all open web pages!
+### Team Members
+
+* **Team Lead:** Sebin Lalu - S3 CSEB
+* **Member 2:** Ramshankar R - S3 CSEB
 
 ---
 
-## 🔄 The Product Loop & State Machine
+## Project Description
 
+**My Dog Ate My Homework** is a completely unnecessary browser extension featuring a tiny pixelated dog that demands to be fed every 30 seconds.
+
+Ignore the dog for too long and it gets hungry, runs around your screen, and starts eating random chunks of text you've already typed. Feed it a treat in time, and it peacefully goes back to sleep.
+
+---
+
+## The Problem (that doesn't exist)
+
+People are able to use their browsers peacefully without having to worry about the nutritional requirements of a tiny pixelated dog.
+
+This is clearly unacceptable.
+
+There is currently no system forcing users to stop whatever they're doing every 30 seconds to feed a digital dog.
+
+**We decided to solve this extremely serious problem.**
+
+---
+
+## The Solution (that nobody asked for)
+
+We created at puts a small pixelated dog and its bowl of treats at the bottom of your browser.
+
+The dog follows a simple cycle:
+
+**Sleep → Wake Up → Demand Food → Eat Your Text → Return → Sleep**
+
+Every 30 seconds, the dog wakes up and looks at the user.
+
+The user then has **10 seconds** to feed it by dragging a treat from the bowl to the dog.
+
+If the dog is fed:
+
+**Treat → Munch Munch → Sleep**
+
+If the dog is ignored:
+
+**Angry Dog → Run Around → Eat Text → Return Home → Sleep**
+
+It doesn't matter whether the text is an assignment, an important message, a paragraph you've spent 20 minutes writing, or something completely useless.
+
+**The dog eats it anyway.**
+
+---
+
+# 🐕 How It Works
+
+### 1. 💤 Dog Sleeps
+
+The dog starts in a sleeping animation at the bottom of the browser.
+
+The treat bowl sits nearby.
+
+While sleeping, the dog is harmless and does absolutely nothing useful.
+
+A 30-second timer runs in the background.
+
+---
+
+### 2. 👀 Dog Wakes Up
+
+After 30 seconds, the dog wakes up.
+
+It lifts its head and looks toward the user.
+
+This begins the **10-second feeding window**.
+
+The message is simple:
+
+> **Feed me.**
+
+---
+
+### 3. 🦴 Drag the Treat
+
+The user clicks on the treat bowl.
+
+A small pixelated treat attaches to the cursor.
+
+The user can then drag the treat across the browser window.
+
+---
+
+### 4. 😋 Feed the Dog
+
+If the user moves the treat over the dog and releases the mouse button:
+
+* The dog detects the treat.
+* A munching animation plays.
+* The feeding cycle resets.
+* The dog returns to its sleeping animation.
+* The 30-second timer starts again.
+
+The crisis has been successfully avoided.
+
+---
+
+### 5. 🏃 The Dog Gets Hungry
+
+If the dog isn't fed within 10 seconds, it stops waiting.
+
+It gets up and starts running randomly around the browser.
+
+While running, the dog searches for text that the user has already entered.
+
+When it reaches a suitable text target:
+
+**CHOMP.**
+
+A random chunk of the text gets deleted.
+
+The dog continues running and eating until its hunger episode is over.
+
+Then it returns to its original position and goes back to sleep.
+
+---
+
+# 🧠 Text Detection & Eating
+
+The extension uses JavaScript and browser DOM interaction to identify editable areas of the current webpage.
+
+The dog can look for user-entered content in places such as:
+
+* Text input fields
+* Textareas
+* Editable elements
+* Supported web-based editors
+
+When the dog enters its **hungry/running state**, it identifies suitable text targets and moves toward them.
+
+Once the dog reaches a target, a randomly selisting text is removed.
+
+The amount of text eaten is intentionally random.
+
+Because if the dog is going to destroy your work, it shouldn't be predictable.
+
+---
+
+# 🎨 Pixel Art & Animations
+
+The entire extension uses custom pixel-art assl like a tiny creature living inside the browser.
+
+## Animations
+
+### 💤 1. Sleeping
+
+The dog's default state.
+
+It lies down and sleeps while waiting for its next feeding cycle.
+
+---
+
+### 👀 2. Waking Up
+
+The dog lifts its head, wakes up and looks toward the user.
+
+This signals that it is ready to be fed.
+
+---
+
+### 🏃 3. Running & Munching
+
+When the dog isn't fed, it starts running across the screen.
+
+The animation includes mouth movement to make it look like the dog is constantly searching for something to eat.
+
+Unfortunately, that something is your text.
+
+---
+
+### 😋 4. Sitting & Munching
+
+When successfully fed, the dog sits upright and performs a short munching animation.
+
+This confirms that the treat has been successfully delivered.
+
+---
+
+### 💤 5. Going Back to Sleep
+
+After eating, the dog returns to its original position and goes back to sleep.
+
+The 30-second hunger timer then starts again.
+
+---
+
+# 🖼️ Static Assets
+
+### 🥣 Treat Bowl
+
+A static pixel-art bowl containing the dog's treats.
+
+It remains positioned near the bottom-left of the browser.
+
+---
+
+### 🟤 Dog Treat
+
+A small brown pixel-art object representing the dog's food.
+
+When the user clicks and drags from the treat bowl, the treat follows the cursor until it is delivered to the dog.
+
+---
+
+# 🛠️ Technical Details
+
+## Technologies / Components Used
+
+### For Software
+
+* **JavaScript** — Core behaviour, timers, state management, mouse interactions and text manipulation
+* **HTML** — Extension structure and UI elements
+* **CSS** — Positioning, styling and animations
+* **Browser Extension APIs** — Interaction with webpages
+* **DOM APIs** — Detecting and interacting with editable webpage content
+* **Claude** — Browser-extension architecture and development assistance
+* **Antigravity** — Development and implementation assistance
+* **Claude, ChatGPT & EZGIF** — Pixel-art creation, animation preparation and asset processing
+* **Git & GitHub** — Version control and collaboration
+
+### For Hardware
+
+**None.**
+
+No hardware was harmed during the development of this project.
+
+---
+
+# ⚙️ Implementation
+
+## Software Architecture
+
+The extension is built around a simple **state machine** controlling the dog's behaviour.
+
+```text
+                    ┌──────────────┐
+                    │    SLEEP     │
+                    └──────┬───────┘
+                           │
+                     30 seconds
+                           │
+                           ▼
+                    ┌──────────────┐
+                    │     WAKE     │
+                    └──────┬───────┘
+                           │
+                     10 second window
+                           │
+                  ┌────────┴────────┐
+                  │                 │
+                FED             NOT FED
+                  │                 │
+                  ▼                 ▼
+           ┌────────────┐    ┌──────────────┐
+           │   MUNCH    │    │    RUNNING   │
+           └─────┬──────┘    └──────┬───────┘
+                 │                  │
+                 │             Find Text
+                 │                  │
+                 │                  ▼
+                 │           ┌──────────────┐
+                 │           │  EAT TEXT    │
+                 │           └──────┬───────┘
+                 │                  │
+                 │             Return Home
+                 │                  │
+                 └─────────┬────────┘
+                           ▼
+                    ┌──────────────┐
+                    │    SLEEP     │
+                    └──────────────┘
 ```
-[SLEEPING]  --( 30s timer )-->  [WAKING]  --( ~0.9s )-->  [ALERT]
-                                                             |
-            +------------------------------------------------+
-            | (Drop treat)                                   | (10s unfed)
-            v                                                v
-        [EATING]                                         [RUNNING] (Destructive Rampage!)
-            |                                                |
-        [DOZING]                                         [RETURNING]
-            |                                                |
-            v                                                v
-        [SLEEPING] <------------------------------------+ [DOZING]
+
+---
+
+# 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/seb-iin/useless_project_temp.git
 ```
 
-1. **`SLEEPING`**: Dog rests curled up in his home corner (`assets/dog_sleep_loop.gif`).
-2. **`WAKING`**: After 30 seconds, he opens his eyes and sits up (`assets/dog_wake_look.gif`, ~900ms).
-3. **`ALERT`**: Sits expectantly with a "feed me!" speech bubble (`assets/dog_alert_idle.gif`).
-4. **Feeding Interaction**: Click-and-hold the treat bowl in the opposite corner, drag a kibble treat over the dog, and release.
-   - If fed during `WAKING`, `ALERT`, `RUNNING`, or `RETURNING`: enters **`EATING`** (`assets/dog_eat_treat.gif`, ~1600ms + postFeed delay), then **`DOZING`** (`assets/dog_sleep_enter.gif`, ~1200ms), and returns to **`SLEEPING`**.
-5. **Rampage**: If ignored for 10 seconds, he enters **`RUNNING`** (`assets/dog_run_munch.gif`), sprinting along 3–6 random waypoints at 620 px/s with chomping jaws.
-6. **Destructive Text Eating**: Any editable field (`<input>`, `<textarea>`, `contenteditable`) hit by his mouth anchor loses a contiguous chunk of 4–28 characters permanently using native prototype setters.
-7. **`RETURNING`**: After finishing waypoints or 9 seconds of rampage, he trots back to his corner, dozes off, and restarts the 30-second loop.
+Move into the project directory:
+
+```bash
+cd useless_project_temp
+```
+
+No additional hardware or external setup is required.
 
 ---
 
-## ⌨️ Developer Keyboard Shortcuts
+# 🚀 Run
 
-To test state transitions without waiting 30 seconds:
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> — **Wake Up Now** (force transition to `WAKING`)
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd> — **Rampage Now** (force transition to `RUNNING`)
-- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>0</kbd> — **Go To Sleep Now** (force transition to `SLEEPING`)
+### Chrome / Chromium-based browsers
+
+1. Open the browser.
+2. Go to:
+
+```text
+chrome://extensions
+```
+
+3. Enable **Developer Mode**.
+4. Select **Load unpacked**.
+5. Select the project folder.
+6. Enable the extension.
+7. Open a webpage containing editable text.
+8. Wait for the dog.
+
+### Firefox
+
+1. Open Firefox.
+2. Go to:
+
+```text
+about:debugging
+```
+
+3. Select **This Firefox**.
+4. Select **Load Temporary Add-on**.
+5. Select the extension's manifest file.
+6. Open a webpage containing editable text.
+7. Wait for the dog.
 
 ---
 
-## 🛡️ Exclusions & Protection Rules (§7.4)
+# 📸 Project Documentation
 
-The dog will **NEVER** eat text from:
-- Password input fields (`<input type="password">`)
-- Excluded input types (`hidden`, `file`, `submit`, `reset`, `button`, `checkbox`, `radio`, `range`, `color`, `image`)
-- Disabled or readonly fields (`disabled`, `readOnly`)
-- Elements containing or inside `[data-pixel-dog-safe]`
-- The extension's own Shadow DOM
+## Screenshots
 
----
+### Screenshot 1 — The Sleeping Dog
 
-## 🎨 Asset Cavity System
+![Screenshot1](Add screenshot 1 here)
 
-This repository contains **no art files** out of the box. Missing images are handled dynamically by rendering dashed placeholder boxes naming the required asset.
-
-To add art, place exported sprite assets into the `assets/` directory adhering to the canvas contract in `assets/README.md`.
+*The dog peacefully sleeping at the bottom of the browser with its treat bowl nearby.*
 
 ---
 
-## ⚡ Limitations & Scope
+### Screenshot 2 — Feeding Time
 
-- **Top frame only**: Does not cross into `<iframe>` elements (`all_frames: false`).
-- **Tab Isolation**: Each open browser tab has an independent dog and timer instance.
-- **Pausable Timers**: When a tab is hidden/backgrounded, timers pause so rampages never happen while away.
+![Screenshot2](Add screenshot 2 here)
+
+*The user drags a treat from the bowl toward the hungry dog.*
+
+---
+
+### Screenshot 3 — My Dog Ate My Homework
+
+![Screenshot3](Add screenshot 3 here)
+
+*The dog has entered its hungry state and is running around the browser looking for text to eat.*
+
+---
+
+# 📊 Workflow
+
+![Workflow](Add workflow diagram here)
+
+*Workflow showing the complete dog behaviour cycle from sleeping and waking to either being fed or eating the user's text.*
+
+---
+
+# 🎥 Project Demo
+
+## Video
+
+[Add your demo video link here]
+
+*The demo demonstrates the complete interaction cycle: the dog sleeping, waking up, being fed, returning to sleep, and the alternative behaviour where the dog becomes hungry and starts eating text.*
+
+---
+
+# 🔗 Additional Demos
+
+* (Add link here)
+* [Project Presentation](Add link here)
+* [Additional Documentation](Add link here)
+
+---
+
+# 👥 Team Contributions
+
+### Sebin Lalu
+
+* Browser extension architecture and overall project implementation
+* Dog behaviour and state-machine logic
+* Feeding interaction and treat dragging
+* Timer and animation control
+* Integration and testing
+
+### Ramshankar R
+
+* Text detection and webpage DOM interaction
+* Text-eating mechanism
+* Dog movement and interaction with webpage elements
+* Testing and debugging
+* Integration of project components
+
+### Pixel Art & Assets
+
+* **Claude**
+* **ChatGPT**
+* **EZGIF**
+
+Used for designing, refining, animating and processing the pixel-art dog, treats and other visual assets.
+
+---
+
+# 🧪 Testing
+
+| Test Case                    | Expected Behaviour              |
+| ---------------------------- | ------------------------------- |
+| Extension starts             | Dog appears sleeping            |
+| 30 seconds pass              | Dog wakes up                    |
+| Treat is dragged toward dog  | Treat follows cursor            |
+| Treat reaches dog            | Dog accepts treat               |
+| Dog is fed                   | Munching animation plays        |
+| Dog is successfully fed      | Dog returns to sleep            |
+| Dog isn't fed for 10 seconds | Dog starts running              |
+| Dog reaches editable text    | Text-eating behaviour activates |
+| Text is eaten                | Random chunk of text is removed |
+| Hunger episode ends          | Dog returns home                |
+| Dog returns home             | Dog goes back to sleep          |
+| New timer starts             | Cycle repeats                   |
+
+---
+
+# 🐛 Known Limitations
+
+* Text interaction depends on how individual websites implement their text editors.
+* Some complex web applications may not expose editable content in a way the extension can easily manipulate.
+* The dog currently works best with standard inputs, textareas and supported editable elements.
+* The dog's understanding of "important text" is currently **non-existent**.
+* The dog does not recognize deadlines.
+* The dog does not accept excuses.
+
+---
+
+# 🔮 Future Improvements
+
+If we somehow decide that this project isn't useless enough yet:
+
+* 🐕 Multiple dog personalities
+* 🍖 Different types of treats
+* 🏠 A customizable dog house
+* 😡 Different hunger levels
+* 🏃 More running animations
+* 🎵 Dog sound effects
+* 💬 Random dog dialogue
+* 📊 "Words Eaten Today" counter
+* 🏆 Leaderboard for most destroyed text
+* 🐶 Multiple dogs competing for food
+* 🎨 Custom pixel-art themes
+* ⚙️ Customizable hunger timers
+* 🌐 Better support for complex web editors
+* 🦴 Different consequences for starving the dog
+
+---
+
+# 🤔 Why Does This Exist?
+
+We asked ourselves:
+
+> **"What if a browser extension could make using a browser objectively more annoying?"**
+
+And thus, **My Dog Ate My Homework** was born.
+
+Thousands of browser extensions exist to improve productivity.
+
+Ours exists to make sure you **feed a pixelated dog every 30 seconds or lose your work.**
+
+Is it useful?
+
+**No.**
+
+Does it need to exist?
+
+**Absolutely not.**
+
+Does the dog care?
+
+**No. The dog is hungry.**
+
+---
+
+# ❤️ Acknowledgements
+
+This project was created as part of **TinkerHub Useless Projects 3.0**.
+
+Built using:
+
+* Questionable decisions
+* Pixel art
+* JavaScript
+* Browser APIs
+* Claude
+* ChatGPT
+* Antigravity
+* EZGIF
+* GitHub
+* And one extremely hungry dog
+
+---
+
+Made with ❤️ and 🐶 at **TinkerHub Useless Projects**

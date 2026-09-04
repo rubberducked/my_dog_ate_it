@@ -332,7 +332,8 @@ about:debugging
 
 ### Screenshot 1 — The Sleeping Dog
 
-![Screenshot1](Add screenshot 1 here)
+<img width="113" height="113" alt="Screenshot 2026-09-04 070258" src="https://github.com/user-attachments/assets/f2577435-07d9-4c56-907f-8a5b791dc060" />
+
 
 *The dog peacefully sleeping at the bottom of the browser with its treat bowl nearby.*
 
@@ -340,15 +341,16 @@ about:debugging
 
 ### Screenshot 2 — Feeding Time
 
-![Screenshot2](Add screenshot 2 here)
+<img width="111" height="143" alt="Screenshot 2026-09-04 070324" src="https://github.com/user-attachments/assets/be02f328-c18b-48b4-b16d-d4d26bd97981" />
+
 
 *The user drags a treat from the bowl toward the hungry dog.*
 
 ---
 
 ### Screenshot 3 — Ma Dog Ate Ma Homework
+<img width="157" height="147" alt="Screenshot 2026-09-04 070330" src="https://github.com/user-attachments/assets/ba48820a-a592-4ea2-8631-c44dd23f1d2b" />
 
-![Screenshot3](Add screenshot 3 here)
 
 *The dog has entered its hungry state and is running around the browser looking for text to eat.*
 

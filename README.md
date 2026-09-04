@@ -368,7 +368,11 @@ about:debugging
 
 ## Video
 
-[Add your demo video link here]
+
+
+https://github.com/user-attachments/assets/4504f46e-4439-4fac-a07e-0d576cf85b9f
+
+
 
 *The demo demonstrates the complete interaction cycle: the dog sleeping, waking up, being fed, returning to sleep, and the alternative behaviour where the dog becomes hungry and starts eating text.*
 

@@ -324,6 +324,8 @@ about:debugging
 6. Open a webpage containing editable text.
 7. Wait for the dog.
 
+
+note: also compatible with Google Chrome.
 ---
 
 # 📸 Project Documentation

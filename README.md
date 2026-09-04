@@ -358,7 +358,8 @@ about:debugging
 
 # 📊 Workflow
 
-![Workflow](Add workflow diagram here)
+<img width="1536" height="1024" alt="8310df7a-797b-482d-b4a1-f01c1926ba1b" src="https://github.com/user-attachments/assets/1398c33c-219e-46cb-9287-14633b27130e" />
+
 
 *Workflow showing the complete dog behaviour cycle from sleeping and waking to either being fed or eating the user's text.*
 
@@ -368,21 +369,11 @@ about:debugging
 
 ## Video
 
-
-
 https://github.com/user-attachments/assets/4504f46e-4439-4fac-a07e-0d576cf85b9f
 
 
 
 *The demo demonstrates the complete interaction cycle: the dog sleeping, waking up, being fed, returning to sleep, and the alternative behaviour where the dog becomes hungry and starts eating text.*
-
----
-
-# 🔗 Additional Demos
-
-* (Add link here)
-* [Project Presentation](Add link here)
-* [Additional Documentation](Add link here)
 
 ---
 
